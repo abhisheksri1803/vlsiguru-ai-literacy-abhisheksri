@@ -72,3 +72,64 @@ You say “Alexa, I’m leaving.”
 → It uses multiple tools (IoT devices) and executes them autonomously.
 
 Mission-7  What actually runs AI?
+1. CPU (Central Processing Unit)
+Role: General‑purpose processor, executes instructions sequentially.
+Good at: Control logic, branching, running operating systems, everyday apps.
+Limitation: Not optimized for massive parallel math operations.
+
+2. GPU (Graphics Processing Unit)
+Role: Originally for graphics rendering, now widely used for AI.
+Good at: Parallel matrix/vector computations.
+Why useful for AI: Neural networks involve huge matrix multiplications; GPUs can process thousands of operations simultaneously.
+
+3. NPU / AI Accelerator
+Role: Specialized hardware designed only for AI workloads.
+Good at: Running neural networks efficiently with low power.
+Why modern systems use it: Faster inference, lower energy, optimized for tensor operations (e.g., Apple Neural Engine, Google TPU).
+
+4. Parallel Computation
+Definition: Breaking tasks into smaller pieces and running them simultaneously.
+Importance: AI models have millions of parameters; parallelism makes training feasible.
+
+5. Why AI Depends on Compute + Memory
+Compute: Needed for billions of multiplications/additions in training.
+Memory: Needed to store huge datasets, model parameters, and intermediate results.
+Without both, training large models would be impossible.
+
+6. Training vs Inference (Hardware View)
+Training:
+Heavy compute load (backpropagation, gradient updates).
+Requires GPUs/TPUs with massive parallelism and large memory.
+Inference:
+Running the trained model to produce outputs.
+Less compute‑intensive, often optimized on CPUs or NPUs for speed and efficiency.
+
+7. AI Application → AI Model → Software/Framework (PyTorch, TensorFlow)
+                 ↓
+        CPU / GPU / Accelerator → Memory
+8. Real AI Workload Example
+Workload: Image recognition (e.g., classifying photos in Google Photos).
+Best hardware: GPU or NPU.
+Reason: Image recognition uses convolutional neural networks (CNNs) with heavy matrix operations. GPUs accelerate training, while NPUs make inference fast and power‑efficient on mobile devices.
+
+Mission-8 Where could this help your VLSI track?
+| VLSI Area | Task | How AI Might Help | Why Human Knowledge Still Matters |
+--------------------------------------------------------------------------
+**Design Verification (DV)** -> Debugging repetitive testbench failures -> AI can quickly analyze simulation logs, detect recurring error patterns, and even suggest likely bug sources. -> Human/domain expertise is needed to validate whether the AI’s suggestion makes sense in the design context and to apply correct fixes.
+AI can accelerate repetitive debugging in DV by spotting log patterns and predicting root causes. But engineers must still apply their domain knowledge to ensure correctness, because hardware verification involves nuanced design intent that AI alone cannot fully understand.
+
+Mission-9 Build your own AI-use rule
+My 5 Rules for Using AI ->
+Verification First:  
+I will always cross‑check AI answers with at least two reliable sources before trusting them, especially for technical or factual content.
+(Justified by Mission 5: AI can sound confident but still be wrong, so verification is essential.)
+Protect Confidential Information:  
+I will never input proprietary project details, exam papers, or sensitive company data into AI systems to avoid leaks or misuse.
+Take Responsibility:  
+I will treat AI outputs as drafts or suggestions, but the final work submitted will always be my responsibility, reviewed and corrected by me.
+Use AI for Productivity, Not Dependence:  
+I will use AI to speed up repetitive tasks (debugging logs, summarising notes, drafting letters) but not rely on it as a substitute for my own learning or problem‑solving.
+Context Matters:  
+I will always provide clear context (engineering domain, exam prep style, coding framework) when asking AI for help, so the output is relevant and accurate.
+
+These five rules form my personal AI‑use agreement. They ensure I use AI safely, intelligently, and responsibly in my VLSI and exam preparation journey.
