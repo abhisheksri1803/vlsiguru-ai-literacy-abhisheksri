@@ -22,6 +22,7 @@ DL is a deeper subset of ML using neural networks.
 GenAI is not strictly a subset of DL but often uses DL to generate new content.
 
 Mission-3 Is it really AI?
+
 | System/Feature           | Classification 
 ---------------------------------------------------------------
 | Calculator               | Rule-based / Traditional software 
@@ -39,4 +40,35 @@ Beginner explanation: LLMs are essentially trained to predict the next word, and
 One Correction/Clarification ->
 The assistant initially implied that Generative AI is separate from Deep Learning, but in reality, most GenAI systems (like ChatGPT) are built on deep learning transformers. I had to clarify that GenAI is not a parallel branch but an application of DL.
 
-Mission-5 
+Mission-5 Can AI be confidently wrong?
+Prompt (to AI assistant):  
+“Who invented the World Wide Web?”
+AI Answer (example):  
+“The World Wide Web was invented by Tim Berners‑Lee in 1989 while working at CERN.”
+Verification Source:
+CERN official page: https://home.cern/science/computing/birth-web (home.cern in Bing)
+World Wide Web Foundation: https://webfoundation.org/about/vision/history-of-the-web/ (webfoundation.org in Bing)
+Result:
+Correct. Both sources confirm Tim Berners‑Lee invented the World Wide Web in 1989 at CERN.
+Lesson:
+The test proved the AI answer was factually correct for this specific question.
+However, it did not prove that the AI is always reliable. It only showed correctness in one case. AI can still be confidently wrong in other contexts, so independent verification is always necessary.
+
+Mission-6 Chatbot or agent?
+| Concept                  | What it Does                            | Example |
+  ------------------------------------------------------------------------------------------------
+| **LLM**                  | Generates text by predicting next words | ChatGPT writing an essay |
+| **AI Application**       | Uses AI for a specific task             | Google Translate |
+| **RAG**                  | Retrieves info + generates              | Bing Copilot with web grounding |
+| **Tool‑Using Assistant** | Calls tools to extend abilities         | AI assistant creating a calendar event |
+| **Agent**                | Plans + acts autonomously               | Self‑driving car |
+Simple Flow Design
+User → Model (LLM) → Tool/Retrieval (e.g., search, calculator) → Result → Response/Action
+
+Everyday Agentic Workflow Example
+Smart Home Assistant (like Alexa + smart devices):  
+You say “Alexa, I’m leaving.”
+→ The agent decides actions: turn off lights, lock doors, adjust thermostat.
+→ It uses multiple tools (IoT devices) and executes them autonomously.
+
+Mission-7  What actually runs AI?
